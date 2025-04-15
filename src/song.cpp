@@ -28,6 +28,6 @@ class $modify(ProxySongInfoLayer, SongInfoLayer) {
     }
 
     void handleProxyButtonClick(CCObject*) {
-        system( fmt::format("start https://endless-services.zhazha120.cn/#/endless-proxy/newgrounds/audios/{}", this->m_songID).c_str() );
+        CCApplication::sharedApplication()->openURL( fmt::format("start https://endless-services.zhazha120.cn/#/endless-proxy/newgrounds/audios/{}", this->m_songID).c_str() );
     }
 };

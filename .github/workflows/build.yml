@@ -17,6 +17,9 @@ jobs:
 
           - os: macos-latest
 
+          - os: macos-latest
+            target: iOS
+
           - os: ubuntu-latest
             target: Android32
 
@@ -34,6 +37,7 @@ jobs:
           bindings: geode-sdk/bindings
           bindings-ref: main
           combine: true
+          sdk: nightly
           target: ${{ matrix.config.target }}
 
   package:
